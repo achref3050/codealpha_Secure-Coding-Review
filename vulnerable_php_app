@@ -1,0 +1,46 @@
+<?php
+
+require_once('../_helpers/strip.php');
+
+// This database contains a table with 5 rows.
+$db = new SQLite3('test.db');
+
+$id = $_GET['id'];
+
+if (strlen($id) > 0) 
+{
+  // Fetch and display a specific secret.
+  //
+  // Note that the overview page selects rows from the secrets table
+  // where user_id = 1. However, the query below lacks a similar clause
+  // or any authorization check to ensure the user is authorized to view the secret.
+  // Consequently, any ID can be used in the ?id= parameter to read any secret from the table.
+  $query = $db->query('select * from secrets where id = ' . (int)$id);
+
+  // This loop iterates through the results of the SQL query and prints the content
+  // of the 'secret' column for each row. It displays the retrieved secrets to the user.
+  while ($row = $query->fetchArray())
+  {
+    echo 'Secret: ' . $row['secret'];
+  }
+
+  echo '<br /><br /><a href="/">Go back</a>';
+
+} 
+
+else 
+{
+  // Display all secrets for user_id = 1.
+  $query = $db->query('select * from secrets where user_id = 1');
+
+  // This outputs the HTML for a heading that says "Your secrets" in bold,
+  // followed by two line breaks.
+  echo '<strong>Your secrets</strong><br /><br />';
+
+  while ($row = $query->fetchArray()) 
+  {
+    echo '<a href="/?id=' . $row['id'] . '">#' . $row['id'] . '</a><br />';
+  }
+  
+}
+?>

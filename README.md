@@ -1,4 +1,4 @@
-Introduction:
+#Introduction:
 
 This project is part of an internship task focused on secure coding practices. The objective is to identify security vulnerabilities in a given PHP application, provide recommendations for secure coding, and implement those recommendations. The project involves uploading both the vulnerable and revised versions of the code to GitHub, along with a detailed explanation of the changes made.
 

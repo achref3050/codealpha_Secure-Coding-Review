@@ -32,10 +32,12 @@ The revised code addresses the identified vulnerabilities by implementing prepar
 Key Fixes
 
 1)Using Prepared Statements:
+![prep](prep_statement.png)
 
 Prepared statements help prevent SQL injection by separating SQL logic from the data. Instead of concatenating user input directly into the query, use placeholders and bind parameters.
 
 2)Authorization Check:
+![auth](authori_check.png)
 
 We have to ensure that the current user is authorized to access the requested secret by verifying the user_id.
 
@@ -44,7 +46,7 @@ We have to ensure that the current user is authorized to access the requested se
 We have to implement proper error handling to avoid exposing sensitive information.
 
 4)Output Encoding:
-
+![output_enc](output_encoding.png)
 Encode output to prevent Cross-Site Scripting (XSS) attacks.
 
 

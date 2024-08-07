@@ -30,6 +30,7 @@ Secrets are displayed directly without any form of access control, making sensit
 The revised code addresses the identified vulnerabilities by implementing prepared statements, adding authorization checks, and incorporating proper error handling.
 
 Key Fixes
+
 1)Using Prepared Statements:
 
 Prepared statements help prevent SQL injection by separating SQL logic from the data. Instead of concatenating user input directly into the query, use placeholders and bind parameters.

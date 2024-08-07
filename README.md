@@ -1,9 +1,10 @@
-#Introduction:
+# Introduction
 
 This project is part of an internship task focused on secure coding practices. The objective is to identify security vulnerabilities in a given PHP application, provide recommendations for secure coding, and implement those recommendations. The project involves uploading both the vulnerable and revised versions of the code to GitHub, along with a detailed explanation of the changes made.
 
 
-Vulnerable Code
+# Vulnerable code
+![vulnerable](vulnerable_code.png)
 
 Explanation of Vulnerabilities and Fixes:
 
@@ -24,7 +25,8 @@ Secrets are displayed directly without any form of access control, making sensit
 
 
 
-Revised Code
+# Revised code
+![revised](revised_code.png)
 The revised code addresses the identified vulnerabilities by implementing prepared statements, adding authorization checks, and incorporating proper error handling.
 
 Key Fixes

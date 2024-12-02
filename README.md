@@ -10,6 +10,8 @@
 - [Setup](#setup)
   - [Prerequisites](#prerequisites)
   - [Installation](#installation)
+    - [Python Backend](#python-backend)
+    - [iOS Notifier App](#ios-notifier-app)
 - [Further Improvements](#further-improvements)
 - [Contributors](#contributors)
 - [License](#license)
@@ -29,6 +31,7 @@ The project uses the following tools and technologies:
    - Translates text to English for uniform processing.
    - Detects toxicity using `transformers` with a pre-trained `unitary/toxic-bert` model.
 3. **Firebase Integration**: Logs all detected events in a Firebase Realtime Database for centralized monitoring.
+4. **iOS Notifier App**: Provides real-time notifications to parents when inappropriate content or text is detected.
 
 ---
 
@@ -47,6 +50,9 @@ Logs the following events in the Firebase Realtime Database:
 - NSFW content detections.
 - Toxic text detections.
 
+### 4. iOS Notifier App
+The iOS app is designed for parents to receive real-time notifications about detections. It integrates directly with Firebase to fetch logs and display alerts.
+
 ---
 
 ## Setup
@@ -57,12 +63,19 @@ Ensure you have the following tools installed:
 - Required Python libraries listed in the `requirements.txt` file.
 - Tesseract OCR installed and configured (update the path in the script if necessary).
 - Firebase project with a Realtime Database and a Service Account JSON file.
+- Xcode installed on a macOS system for building the iOS app.
+- An Apple Developer account for deploying the iOS app.
+
+---
 
 ### Installation
+
+#### Python Backend
 1. Clone the repository:
    ```bash
    git clone https://github.com/yourusername/real-time-threat-detection.git
    cd real-time-threat-detection
+
    
 2. Install required dependencies:
 
@@ -83,9 +96,8 @@ pytesseract.pytesseract.tesseract_cmd = r'C:\Path\To\Tesseract-OCR\tesseract.exe
 
 6. Download the NSFW detection model and place it in the project directory:
 
-7. Replace "nsfw_mobilenet2.224x224.h5" in the script with the correct path to your model file.
+   **At this point, you are able to test the detections and track them through the terminal**. When the script runs, it will process the input images and log any detected NSFW content or toxic text.
 
-Run the script:
-
-  ```bash
-projet.py
+8. Run the script:
+   ```bash
+   python projet.py

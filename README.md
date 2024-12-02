@@ -84,12 +84,13 @@ Ensure you have the following tools installed:
 
 3.  Set up Firebase:
    ```bash
-  Replace parentmonitoringapp-67794-firebase-adminsdk-auet4-5ce60d0f75.json with your Firebase service account JSON file.
+   Replace parentmonitoringapp-67794-firebase-adminsdk-auet4-5ce60d0f75.json with your Firebase service account JSON file.
+
 4. Update the databaseURL in the script to match your Firebase project URL.
 
 5. Update the Tesseract OCR path in the script:
 
-  ```bash
+   ```bash
    pytesseract.pytesseract.tesseract_cmd = r'C:\Path\To\Tesseract-OCR\tesseract.exe'
 
 

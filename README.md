@@ -80,8 +80,7 @@ Ensure you have the following tools installed:
 2. Install required dependencies:
 
   ```bash
-
-pip install -r requirements.txt
+  pip install -r requirements.txt
 
 3.  Set up Firebase:
 

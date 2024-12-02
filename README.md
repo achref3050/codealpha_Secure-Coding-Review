@@ -79,18 +79,18 @@ Ensure you have the following tools installed:
    
 2. Install required dependencies:
 
-  ```bash
-  pip install -r requirements.txt
+   ```bash
+   pip install -r requirements.txt
 
 3.  Set up Firebase:
-
-Replace parentmonitoringapp-67794-firebase-adminsdk-auet4-5ce60d0f75.json with your Firebase service account JSON file.
+   ```bash
+  Replace parentmonitoringapp-67794-firebase-adminsdk-auet4-5ce60d0f75.json with your Firebase service account JSON file.
 4. Update the databaseURL in the script to match your Firebase project URL.
 
 5. Update the Tesseract OCR path in the script:
 
-
-pytesseract.pytesseract.tesseract_cmd = r'C:\Path\To\Tesseract-OCR\tesseract.exe'
+  ```bash
+   pytesseract.pytesseract.tesseract_cmd = r'C:\Path\To\Tesseract-OCR\tesseract.exe'
 
 
 6. Download the NSFW detection model and place it in the project directory:
